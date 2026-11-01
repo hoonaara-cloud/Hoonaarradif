@@ -1,3 +1,5 @@
+name: Build Windows VST3
+
 on: [push, pull_request, workflow_dispatch]
 
 permissions:
@@ -6,7 +8,8 @@ permissions:
 jobs:
   build-windows-vst3:
     name: Build Windows x64 VST3
-    runs-on: windows-latest
+    # Visual Studio 17 2022 is installed on the windows-2022 image.
+    runs-on: windows-2022
 
     steps:
       - name: Check out source
