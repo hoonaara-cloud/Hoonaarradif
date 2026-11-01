@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoonaar Audio — Radif Atlas Preview</title>
+<style>
+  :root{color-scheme:dark;--bg:#08141b;--panel:#101f29;--panel2:#142832;--line:#29434d;--cream:#f4f0e7;--ink:#1a2b34;--muted:#9aadb3;--gold:#d7ad57;--teal:#63c3b7;--white:#f3f2ed}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1000px 500px at 50% -180px,#1c3b45 0%,var(--bg) 65%);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.45}
+  .wrap{max-width:1120px;margin:0 auto;padding:24px 22px 30px}
+  .hero{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:8px 4px 20px;border-bottom:2px solid var(--gold)}
+  .brand{letter-spacing:.15em;color:#e8c67b;font-size:11px;font-weight:800}
+  h1{font-size:30px;line-height:1.1;margin:4px 0 6px;letter-spacing:-.02em}
+  .subtitle{font-size:13px;color:#a8bbc0}
+  .chip{white-space:nowrap;border:1px solid #31565e;background:#15313b;color:#8dd3c7;padding:9px 14px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.08em}
+  .controls{display:grid;grid-template-columns:1.05fr 1.35fr .8fr;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:18px 0 14px;box-shadow:0 12px 28px #0002}
+  label{display:block;color:#a7b8bd;font-size:10px;font-weight:800;letter-spacing:.1em;margin:0 0 7px}
+  select{width:100%;height:42px;border-radius:8px;border:1px solid #36535e;background:#172a35;color:#f4f4ee;padding:0 12px;font-size:14px;outline:none}
+  select:focus{border-color:var(--gold);box-shadow:0 0 0 2px #d7ad5730}
+  .staff-card{background:var(--cream);border-radius:15px;padding:18px 18px 13px;color:var(--ink);box-shadow:0 18px 42px #0003}
+  .staff-head{display:flex;justify-content:space-between;align-items:start;gap:14px;flex-wrap:wrap;margin:0 3px 6px}
+  .mode-title{font-size:13px;font-weight:900;letter-spacing:.08em}
+  .gusheh-title{font-size:12px;color:#64757a;margin-top:4px}
+  .sig-title{text-align:right;font-size:10px;color:#617177;font-weight:800;letter-spacing:.08em}
+  .score{display:block;width:100%;height:auto;min-height:210px}
+  .score-note{font-size:11px;color:#607176;border-top:1px solid #ddd7ca;padding:9px 4px 0;margin-top:3px}
+  .summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:15px 0}
+  .summary-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;min-height:98px}
+  .summary-card .k{font-size:10px;letter-spacing:.13em;color:var(--muted);font-weight:800}
+  .summary-card .v{font-size:21px;font-weight:800;margin:7px 0 2px;color:var(--white)}
+  .summary-card .s{font-size:11px;color:#a6b8bd}
+  .tones{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px 16px 17px;margin-top:14px}
+  .tones-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:11px}
+  .tones-head h2{font-size:12px;letter-spacing:.11em;margin:0}
+  .tones-head span{color:#91a6ad;font-size:11px}
+  .tone-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+  .tone{background:#152b35;border:1px solid #294650;border-radius:9px;text-align:center;padding:10px 6px 9px;min-height:70px}
+  .tone strong{display:block;font-size:13px;color:#f5f3eb;min-height:20px}
+  .tone small{display:block;font-size:10px;color:#9bb0b6;margin-top:4px}
+  .legend{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+  .legend span{border:1px solid #2d4852;border-radius:999px;color:#b8c7ca;padding:5px 9px;font-size:10px;background:#10232c}
+  .notice{margin-top:14px;border:1px solid #755d2d;background:#261f13;color:#e4d5b5;padding:12px 14px;border-radius:10px;font-size:11px}
+  .notice strong{color:#f1ca74}
+  footer{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:17px 3px 0;color:#738b93;font-size:10px}
+  .footer-brand{font-weight:800;letter-spacing:.13em;color:#9fb0b5}
+  @media(max-width:760px){.controls{grid-template-columns:1fr}.hero{align-items:flex-start;flex-direction:column}.summary{grid-template-columns:1fr}.tone-grid{grid-template-columns:repeat(4,1fr)}.sig-title{text-align:left}.score{min-height:180px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <div class="brand">HOONAAR AUDIO</div>
+      <h1>Radif Atlas</h1>
+      <div class="subtitle">Iranian Dastgah &amp; Avaz • Educational staff notation guide</div>
+    </div>
+    <div class="chip">24-EDO TEACHING REFERENCE · PROTOTYPE 0.1</div>
+  </header>
+
+  <section class="controls" aria-label="Mode controls">
+    <div><label for="mode">DASTGAH / AVAZ</label><select id="mode"></select></div>
+    <div><label for="gusheh">GUSHEH</label><select id="gusheh"></select></div>
+    <div><label for="tonic">TONIC / ENHARMONIC SPELLING</label><select id="tonic"></select></div>
+  </section>
+
+  <section class="staff-card">
+    <div class="staff-head">
+      <div><div class="mode-title" id="modeTitle"></div><div class="gusheh-title" id="gushehTitle"></div></div>
+      <div class="sig-title" id="topFunctions"></div>
+    </div>
+    <div id="score"></div>
+    <div class="score-note">This is a scale reference, not a full melodic transcription. Some gushehs change pitch material or modulate; those details must be encoded from a chosen radif edition.</div>
+  </section>
+
+  <section class="summary" aria-label="Important notes">
+    <article class="summary-card"><div class="k">TONIC</div><div class="v" id="tonicValue"></div><div class="s">Selected starting pitch</div></article>
+    <article class="summary-card"><div class="k">SHAHID</div><div class="v" id="shahidValue"></div><div class="s" id="shahidSub"></div></article>
+    <article class="summary-card"><div class="k">IST</div><div class="v" id="istValue"></div><div class="s" id="istSub"></div></article>
+  </section>
+
+  <section class="tones">
+    <div class="tones-head"><h2>SCALE TONES</h2><span id="formula"></span></div>
+    <div id="toneGrid" class="tone-grid"></div>
+    <div class="legend"><span>♯ Sharp</span><span>♭ Flat</span><span>𝄲 Sori · quarter-tone sharp</span><span>𝄳 Koron · quarter-tone flat</span><span>Pitch steps shown in 50-cent units</span></div>
+  </section>
+
+  <div class="notice"><strong>Musical-data note:</strong> the stave uses a transposable 24-EDO reference model. In practice, Persian intonation is not always equal-tempered, and one universal Western key signature cannot describe every gusheh. The plugin therefore writes each scale alteration explicitly; source-unspecified Shahid/Ist values are left blank instead of guessed.</div>
+  <footer><span class="footer-brand">HOONAAR AUDIO</span><span>Visual prototype only · no audio or MIDI input · English interface</span></footer>
+</div>
+<script>
+const DATA = {"product":"Hoonaar Audio Radif Atlas","version":"0.1.0 prototype","tuningModel":"24-EDO reference; 50 cents per quarter-step","catalogNote":"Working English-transliterated catalog for the seven commonly listed dastgahs and five avaz. Gusheh names, order, counts, pitch inflections, shahid and ist can vary by radif, performer and transcription. Each mode pitch template is relative to its listed reference tonic. This is not a claim that every regional maqam or every variant is encoded.","modes":[{"name":"Shur","family":"Dastgah","referenceTonic":7,"scale24":[0,3,6,10,13,16,20],"gushehs":[{"name":"Daramad I","shahid":1,"ist":1},{"name":"Daramad II","shahid":1,"ist":1},{"name":"Daramad III — Kermesheh","shahid":null,"ist":null},{"name":"Daramad IV — Rahab","shahid":null,"ist":null},{"name":"Daramad V — Owj","shahid":null,"ist":null},{"name":"Daramad VI — Molla Nazy","shahid":null,"ist":null},{"name":"Naghmeh I","shahid":4,"ist":3},{"name":"Naghmeh II","shahid":4,"ist":3},{"name":"Zirkesh-e Salmak","shahid":null,"ist":null},{"name":"Salmak","shahid":null,"ist":null},{"name":"Golriz","shahid":8,"ist":1},{"name":"Majles-Afrooz","shahid":null,"ist":null},{"name":"Ezzal","shahid":null,"ist":null},{"name":"Safa","shahid":null,"ist":null},{"name":"Bozorg","shahid":null,"ist":null},{"name":"Kuchak","shahid":null,"ist":null},{"name":"Dobeyti","shahid":null,"ist":null},{"name":"Khara","shahid":null,"ist":null},{"name":"Qajar","shahid":7,"ist":4},{"name":"Hazin","shahid":null,"ist":null},{"name":"Shur-e Payin-Dasteh","shahid":null,"ist":null},{"name":"Rahab (gusheh)","shahid":null,"ist":null},{"name":"Chahar-Gusheh","shahid":null,"ist":null},{"name":"Girayli Prelude","shahid":null,"ist":null},{"name":"Razavi","shahid":7,"ist":4},{"name":"Forud","shahid":null,"ist":1},{"name":"Shahnaz","shahid":4,"ist":null},{"name":"Qorcheh","shahid":6,"ist":4},{"name":"Shahnaz-Kot / Asheq-Kosh","shahid":null,"ist":null},{"name":"Girayli","shahid":null,"ist":null},{"name":"Girayli Shasti","shahid":null,"ist":null},{"name":"Rang-e Hashtari","shahid":3,"ist":1},{"name":"Rang-e Shahr-Ashub","shahid":null,"ist":null},{"name":"Rang-e Zarb-e Osool","shahid":null,"ist":null}],"referenceTonicName":"G"},{"name":"Abu Ata","family":"Avaz","referenceTonic":0,"scale24":[0,4,6,10,14,17,20],"gushehs":[{"name":"Ramakali","shahid":null,"ist":null},{"name":"Daramad","shahid":1,"ist":6},{"name":"Sayakhi","shahid":null,"ist":null},{"name":"Hejaz","shahid":5,"ist":1},{"name":"Basteh-Negar","shahid":null,"ist":null},{"name":"Yeguloneh","shahid":null,"ist":null},{"name":"Chaharpareh","shahid":null,"ist":null},{"name":"Gabri","shahid":null,"ist":null},{"name":"Gham-Angiz","shahid":null,"ist":null},{"name":"Gilaki","shahid":null,"ist":null}],"referenceTonicName":"C"},{"name":"Bayat-e Tork","family":"Avaz","referenceTonic":10,"scale24":[0,4,8,10,14,18,21],"gushehs":[{"name":"Daramad I","shahid":1,"ist":5},{"name":"Dugah","shahid":null,"ist":null},{"name":"Forud","shahid":null,"ist":null},{"name":"Daramad II","shahid":null,"ist":null},{"name":"Daramad III","shahid":null,"ist":null},{"name":"Kermesheh","shahid":null,"ist":null},{"name":"Haji Hasani","shahid":null,"ist":null},{"name":"Basteh-Negar","shahid":null,"ist":null},{"name":"Zanguleh","shahid":null,"ist":null},{"name":"Khosravani","shahid":null,"ist":null},{"name":"Naghmeh","shahid":null,"ist":null},{"name":"Feyli","shahid":null,"ist":null},{"name":"Shekasteh","shahid":null,"ist":null},{"name":"Mehrabani","shahid":null,"ist":null},{"name":"Jameh-Daran","shahid":null,"ist":null},{"name":"Mehdi Zarrabi","shahid":null,"ist":null},{"name":"Ruh-al-Arvah","shahid":null,"ist":null},{"name":"Qara'i","shahid":null,"ist":null}],"referenceTonicName":"Bb"},{"name":"Afshari","family":"Avaz","referenceTonic":0,"scale24":[0,3,6,10,14,17,20],"gushehs":[{"name":"Daramad","shahid":1,"ist":6},{"name":"Basteh-Negar","shahid":null,"ist":null},{"name":"Iraq","shahid":null,"ist":null},{"name":"Naghmeh","shahid":null,"ist":null},{"name":"Jameh-Daran (other radifs)","shahid":null,"ist":null},{"name":"Ruhab (other radifs)","shahid":null,"ist":null},{"name":"Meydan (other radifs)","shahid":null,"ist":null},{"name":"Sufi-nameh (other radifs)","shahid":null,"ist":null}],"referenceTonicName":"C"},{"name":"Dashti","family":"Avaz","referenceTonic":0,"scale24":[0,3,6,10,14,17,20],"gushehs":[{"name":"Daramad","shahid":null,"ist":null},{"name":"Owj / Asheq","shahid":null,"ist":null},{"name":"Bidgani","shahid":null,"ist":null},{"name":"Hajiani","shahid":null,"ist":null},{"name":"Gham-Angiz","shahid":null,"ist":null},{"name":"Gilaki","shahid":null,"ist":null},{"name":"Chupani (other radifs)","shahid":null,"ist":null},{"name":"Dashtestani (other radifs)","shahid":null,"ist":null},{"name":"Deylaman (other radifs)","shahid":null,"ist":null},{"name":"Kucheh-Baghi (other radifs)","shahid":null,"ist":null}],"referenceTonicName":"C"},{"name":"Homayun","family":"Dastgah","referenceTonic":7,"scale24":[0,3,8,10,14,16,20],"gushehs":[{"name":"Daramad I","shahid":2,"ist":7},{"name":"Daramad II","shahid":2,"ist":7},{"name":"Zang-e Shotor","shahid":null,"ist":null},{"name":"Mowaliyan","shahid":null,"ist":null},{"name":"Chakavak","shahid":null,"ist":null},{"name":"Tarz","shahid":null,"ist":null},{"name":"Bidad","shahid":null,"ist":null},{"name":"Bidad-Kot","shahid":null,"ist":null},{"name":"Ney-Davud","shahid":null,"ist":null},{"name":"Bavi","shahid":null,"ist":null},{"name":"Suz-o-Godaz","shahid":null,"ist":null},{"name":"Abol-Chap","shahid":null,"ist":null},{"name":"Leili va Majnun","shahid":null,"ist":null},{"name":"Ravandi","shahid":null,"ist":null},{"name":"Nowruz-e Arab","shahid":null,"ist":null},{"name":"Nowruz-e Saba","shahid":null,"ist":null},{"name":"Nowruz-e Khara","shahid":null,"ist":null},{"name":"Nafir","shahid":null,"ist":null},{"name":"Farang","shahid":null,"ist":null},{"name":"Shushtari-Gardan","shahid":null,"ist":null},{"name":"Shushtari","shahid":null,"ist":null},{"name":"Jameh-Daran","shahid":null,"ist":null},{"name":"Raz-o-Niaz","shahid":null,"ist":null},{"name":"Meygoli","shahid":null,"ist":null},{"name":"Moalef","shahid":null,"ist":null},{"name":"Bakhtiari","shahid":null,"ist":null},{"name":"Ezzal / Denasari","shahid":null,"ist":null},{"name":"Rang-e Farah","shahid":null,"ist":null}],"referenceTonicName":"G"},{"name":"Bayat-e Esfahan","family":"Avaz","referenceTonic":0,"scale24":[0,4,6,10,14,17,22],"gushehs":[{"name":"Daramad","shahid":1,"ist":null},{"name":"Jameh-Daran","shahid":null,"ist":null},{"name":"Bayat-e Rajeh I","shahid":null,"ist":null},{"name":"Bayat-e Rajeh II","shahid":null,"ist":null},{"name":"Forud","shahid":null,"ist":null},{"name":"Naghmeh","shahid":null,"ist":null},{"name":"Suz-o-Godaz","shahid":1,"ist":null},{"name":"Owj / Asheq (other radifs)","shahid":5,"ist":null}],"referenceTonicName":"C"},{"name":"Segah","family":"Dastgah","referenceTonic":5,"scale24":[0,4,7,11,14,17,20],"gushehs":[{"name":"Chaharmezrab","shahid":null,"ist":null},{"name":"Daramad","shahid":null,"ist":null},{"name":"Naghmeh","shahid":null,"ist":null},{"name":"Kermesheh ba Muyeh","shahid":null,"ist":null},{"name":"Kermesheh","shahid":null,"ist":null},{"name":"Zang-e Shotor","shahid":null,"ist":null},{"name":"Zabol","shahid":3,"ist":1},{"name":"Basteh-Negar I","shahid":null,"ist":null},{"name":"Muyeh I","shahid":null,"ist":null},{"name":"Mokhalef","shahid":null,"ist":null},{"name":"Haji Hasani","shahid":null,"ist":null},{"name":"Basteh-Negar II","shahid":null,"ist":null},{"name":"Maghlub","shahid":null,"ist":null},{"name":"Naghmeh-e Maghlub","shahid":null,"ist":null},{"name":"Hazin","shahid":null,"ist":null},{"name":"Muyeh II","shahid":null,"ist":null},{"name":"Rahab","shahid":null,"ist":null},{"name":"Masihi","shahid":null,"ist":null},{"name":"Shah-Khata'i","shahid":null,"ist":null},{"name":"Takht-e Taqdis","shahid":null,"ist":null},{"name":"Rang-e Delgosha","shahid":null,"ist":null}],"referenceTonicName":"F"},{"name":"Chahargah","family":"Dastgah","referenceTonic":0,"scale24":[0,3,8,10,14,17,22],"gushehs":[{"name":"Daramad I","shahid":1,"ist":1},{"name":"Daramad II","shahid":1,"ist":1},{"name":"Daramad III — Pish-Zanguleh","shahid":null,"ist":null},{"name":"Daramad IV","shahid":null,"ist":null},{"name":"Naghmeh","shahid":null,"ist":null},{"name":"Kermesheh","shahid":null,"ist":null},{"name":"Kermesheh ba Muyeh","shahid":null,"ist":null},{"name":"Zang-e Shotor","shahid":null,"ist":null},{"name":"Zabol","shahid":3,"ist":1},{"name":"Basteh-Negar","shahid":null,"ist":null},{"name":"Muyeh","shahid":4,"ist":null},{"name":"Forud","shahid":null,"ist":1},{"name":"Hesar","shahid":5,"ist":null},{"name":"Hesar — parts I–III","shahid":5,"ist":null},{"name":"Chaharmezrab-e Hesar","shahid":null,"ist":null},{"name":"Pas-Hesar","shahid":null,"ist":null},{"name":"Mokhalef","shahid":6,"ist":null},{"name":"Haji Hasani","shahid":null,"ist":null},{"name":"Maghlub","shahid":8,"ist":null},{"name":"Naghmeh-e Maghlub","shahid":null,"ist":null},{"name":"Hazin","shahid":null,"ist":null},{"name":"Hodi","shahid":null,"ist":null},{"name":"Pahlavi","shahid":null,"ist":null},{"name":"Rajaz","shahid":null,"ist":null},{"name":"Mansuri","shahid":8,"ist":1},{"name":"Mansuri — parts II–III","shahid":8,"ist":null},{"name":"Lezgi","shahid":null,"ist":null},{"name":"Matn o Hashiyeh","shahid":null,"ist":null},{"name":"Rang-e Shahr-Ashub","shahid":null,"ist":null}],"referenceTonicName":"C"},{"name":"Mahur","family":"Dastgah","referenceTonic":0,"scale24":[0,4,8,10,14,18,22],"gushehs":[{"name":"Daramad","shahid":1,"ist":1},{"name":"Kermesheh","shahid":null,"ist":null},{"name":"Avaz","shahid":null,"ist":null},{"name":"Moqaddameh-ye Dad","shahid":null,"ist":null},{"name":"Dad","shahid":2,"ist":null},{"name":"Majles-Afrooz","shahid":null,"ist":null},{"name":"Khosravani","shahid":null,"ist":null},{"name":"Delkash","shahid":5,"ist":null},{"name":"Khavaran","shahid":null,"ist":null},{"name":"Tarab-Angiz","shahid":null,"ist":null},{"name":"Neyshaburak","shahid":null,"ist":null},{"name":"Tusi / Nasir-Khani","shahid":null,"ist":null},{"name":"Chaharpareh / Morad-Khani","shahid":null,"ist":null},{"name":"Feyli","shahid":null,"ist":null},{"name":"Mahur-e Saghir","shahid":null,"ist":null},{"name":"Azerbaijani","shahid":null,"ist":null},{"name":"Hesar-e Mahur / Abul","shahid":null,"ist":null},{"name":"Zirafkand","shahid":null,"ist":null},{"name":"Neyriz","shahid":null,"ist":null},{"name":"Shekasteh","shahid":5,"ist":null},{"name":"Iraq","shahid":8,"ist":null},{"name":"Nahib","shahid":null,"ist":null},{"name":"Mohayyer","shahid":null,"ist":null},{"name":"Ashur-Aavand","shahid":null,"ist":null},{"name":"Esfahanak","shahid":null,"ist":null},{"name":"Hazin","shahid":null,"ist":null},{"name":"Zanguleh","shahid":null,"ist":null},{"name":"Rak-e Hendi","shahid":null,"ist":null},{"name":"Rak-e Kashmir","shahid":null,"ist":null},{"name":"Rak-e Abdullah","shahid":1,"ist":1},{"name":"Safir-e Rak","shahid":null,"ist":null},{"name":"Saghiyameh","shahid":null,"ist":null}],"referenceTonicName":"C"},{"name":"Nava","family":"Dastgah","referenceTonic":7,"scale24":[0,4,6,10,14,17,20],"gushehs":[{"name":"Chaharmezrab","shahid":null,"ist":null},{"name":"Daramad I","shahid":null,"ist":null},{"name":"Daramad II","shahid":null,"ist":null},{"name":"Kermesheh","shahid":null,"ist":null},{"name":"Gardaniyeh","shahid":null,"ist":null},{"name":"Naghmeh","shahid":null,"ist":null},{"name":"Bayat-e Rajeh","shahid":null,"ist":null},{"name":"Hazin","shahid":null,"ist":null},{"name":"Oshaq","shahid":null,"ist":null},{"name":"Nahoft","shahid":null,"ist":null},{"name":"Gavest / Goosht","shahid":null,"ist":null},{"name":"Ashiran","shahid":null,"ist":null},{"name":"Neyshaburak","shahid":null,"ist":null},{"name":"Majlesi","shahid":null,"ist":null},{"name":"Khojasteh","shahid":null,"ist":null},{"name":"Malek-Hossein","shahid":null,"ist":null},{"name":"Hossein","shahid":null,"ist":null},{"name":"Busalik","shahid":null,"ist":null},{"name":"Neyriz","shahid":null,"ist":null},{"name":"Rang-e Nastari","shahid":null,"ist":null},{"name":"Rang-e Nava","shahid":null,"ist":null}],"referenceTonicName":"G"},{"name":"Rast-Panjgah","family":"Dastgah","referenceTonic":5,"scale24":[0,4,8,10,14,18,22],"gushehs":[{"name":"Daramad I","shahid":null,"ist":null},{"name":"Daramad II","shahid":null,"ist":null},{"name":"Zanguleh","shahid":null,"ist":null},{"name":"Naghmeh","shahid":null,"ist":null},{"name":"Khosravani","shahid":null,"ist":null},{"name":"Ruh-Afza","shahid":null,"ist":null},{"name":"Panjgah","shahid":null,"ist":null},{"name":"Sepehr","shahid":null,"ist":null},{"name":"Oshaq","shahid":null,"ist":null},{"name":"Neyriz","shahid":null,"ist":null},{"name":"Bal-e Kabootaran","shahid":null,"ist":null},{"name":"Bayat-e Ajam","shahid":null,"ist":null},{"name":"Bahr-e Noor","shahid":null,"ist":null},{"name":"Qarcheh","shahid":null,"ist":null},{"name":"Mobarqa","shahid":null,"ist":null},{"name":"Provanah","shahid":null,"ist":null},{"name":"Tarz","shahid":null,"ist":null},{"name":"Abol-Chap","shahid":null,"ist":null},{"name":"Leili va Majnun","shahid":null,"ist":null},{"name":"Ravandi","shahid":null,"ist":null},{"name":"Nowruz-e Arab","shahid":null,"ist":null},{"name":"Nowruz-e Saba","shahid":null,"ist":null},{"name":"Nowruz-e Khara","shahid":null,"ist":null},{"name":"Nafir","shahid":null,"ist":null},{"name":"Farang","shahid":null,"ist":null},{"name":"Rak-e Abdullah","shahid":null,"ist":null},{"name":"Rak-e Kashmir","shahid":null,"ist":null},{"name":"Rak-e Hendi","shahid":null,"ist":null}],"referenceTonicName":"F"}],"sources":[{"title":"Persian Classical Music: System of Modes","url":"https://fis-iran.org/ebook/persian-system-of-modes/","use":"Seven dastgah/five avaz grouping and the 12 representative pitch spellings used as the prototype’s 24-EDO reference."},{"title":"Radif (Iranian music) — overview","url":"https://fa.wikipedia.org/wiki/%D8%B1%D8%AF%DB%8C%D9%81_(%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C)","use":"Background on variation in radif counts, names and ordering."},{"title":"Shur gusheh list","url":"https://tanbur-music.ir/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C/%DA%AF%D9%88%D8%B4%D9%87%D9%87%D8%A7%DB%8C-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B4%D9%88%D8%B1/","use":"Working names for the Shur catalog."},{"title":"Mahur gusheh list","url":"https://fa.wikipedia.org/wiki/%D9%85%D8%A7%D9%87%D9%88%D8%B1_(%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87_%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C)","use":"Working names for the Mahur catalog."},{"title":"Other gusheh catalog references","url":"https://mahoor.com/fa/cd/20843-the-mirz%C3%A2-abdoll%C3%A2h-radif-for-ud-cd","use":"Cross-checking common gusheh names across published Mirza Abdollah radif listings."}]};
+const TONICS = [
+  {name:'C',pc:0,letter:0},{name:'C♯',pc:1,letter:0},{name:'D♭',pc:1,letter:1},
+  {name:'D',pc:2,letter:1},{name:'D♯',pc:3,letter:1},{name:'E♭',pc:3,letter:2},
+  {name:'E',pc:4,letter:2},{name:'F',pc:5,letter:3},{name:'F♯',pc:6,letter:3},
+  {name:'G♭',pc:6,letter:4},{name:'G',pc:7,letter:4},{name:'G♯',pc:8,letter:4},
+  {name:'A♭',pc:8,letter:5},{name:'A',pc:9,letter:5},{name:'A♯',pc:10,letter:5},
+  {name:'B♭',pc:10,letter:6},{name:'B',pc:11,letter:6}
+];
+const LETTERS=['C','D','E','F','G','A','B'];
+const NATURAL_Q=[0,4,8,10,14,18,22];
+const sharpNames=['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'];
+const flatNames=['C','D♭','D','E♭','E','F','G♭','G','A♭','A','B♭','B'];
+const modeSelect=document.getElementById('mode');
+const gushehSelect=document.getElementById('gusheh');
+const tonicSelect=document.getElementById('tonic');
+let selectedMode=0, selectedTonic=10;
+
+function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function mod(n,m){return ((n%m)+m)%m;}
+function accidentalName(q){return ({'-4':'double flat','-3':'flat + koron','-2':'flat','-1':'koron','0':'natural','1':'sori','2':'sharp','3':'sharp + sori','4':'double sharp'})[String(q)] || (q<0?'lowered':'raised');}
+function accidentalSymbol(q){return ({'-4':'𝄫','-3':'♭𝄳','-2':'♭','-1':'𝄳','0':'','1':'𝄲','2':'♯','3':'♯𝄲','4':'𝄪'})[String(q)]||'';}
+function accidentalFallback(q){return ({'-4':'bb','-3':'bK','-2':'b','-1':'K','0':'','1':'S','2':'#','3':'#S','4':'x'})[String(q)]||'';}
+function signedCents(c){return c===0?'0¢':`+${c}¢`;}
+function tonicOptionForName(name){
+  const exact=TONICS.findIndex(t=>t.name===name || t.name.replace('♯','#').replace('♭','b')===name);
+  return exact>=0?exact:TONICS.findIndex(t=>t.pc===0);
+}
+function makeNotes(mode,tonic){
+  return mode.scale24.map((step,i)=>{
+    const totalLetter=tonic.letter+i;
+    const letter=totalLetter%7;
+    const octave=4+Math.floor(totalLetter/7);
+    const target=4*24+tonic.pc*2+step;
+    let alteration=target-(octave*24+NATURAL_Q[letter]);
+    while(alteration>12) alteration-=24;
+    while(alteration< -12) alteration+=24;
+    const acc=accidentalName(alteration);
+    return {degree:i+1,letter,octave,step,alteration,label:LETTERS[letter]+(alteration?' '+acc:''),symbol:accidentalSymbol(alteration),fallback:accidentalFallback(alteration),staffSteps:(octave*7+letter)-(4*7+2),cents:step*50};
+  });
+}
+function fillControls(){
+  DATA.modes.forEach((m,i)=>modeSelect.add(new Option(`${m.name} · ${m.family}`,i)));
+  TONICS.forEach((t,i)=>tonicSelect.add(new Option(t.name,i)));
+  selectedMode=0;
+  selectedTonic=tonicOptionForName(DATA.modes[0].referenceTonicName);
+  modeSelect.value=String(selectedMode);
+  renderGushehs();
+  tonicSelect.value=String(selectedTonic);
+  update();
+}
+function renderGushehs(){
+  gushehSelect.innerHTML='';
+  const mode=DATA.modes[selectedMode];
+  (mode.gushehs||[]).forEach((g,i)=>gushehSelect.add(new Option(g.name,i)));
+  if(!mode.gushehs||!mode.gushehs.length) gushehSelect.add(new Option('No gusheh names in catalog',0));
+  gushehSelect.value='0';
+}
+function formatFunction(degree,notes){
+  if(!degree) return {value:'Not encoded',sub:'Source-specific value needed'};
+  const idx=mod(degree-1,7);
+  return {value:notes[idx].label,sub:`Scale degree ${degree}${degree>7?' · upper octave':''}`};
+}
+function update(){
+  const mode=DATA.modes[selectedMode];
+  const tonic=TONICS[selectedTonic];
+  const gusheh=mode.gushehs[Math.max(0,Number(gushehSelect.value)||0)]||null;
+  const notes=makeNotes(mode,tonic);
+  document.getElementById('modeTitle').textContent=`${mode.family.toUpperCase()} · ${mode.name.toUpperCase()} IN ${tonic.name}`;
+  document.getElementById('gushehTitle').textContent=`GUSHEH · ${gusheh?gusheh.name:'Not listed'}`;
+  document.getElementById('tonicValue').textContent=tonic.name;
+  const shahid=formatFunction(gusheh?.shahid,notes), ist=formatFunction(gusheh?.ist,notes);
+  document.getElementById('shahidValue').textContent=shahid.value;
+  document.getElementById('shahidSub').textContent=shahid.sub;
+  document.getElementById('istValue').textContent=ist.value;
+  document.getElementById('istSub').textContent=ist.sub;
+  document.getElementById('topFunctions').textContent=`SHAHID · ${shahid.value}   /   IST · ${ist.value}`;
+  document.getElementById('formula').textContent=`Reference formula from tonic · ${mode.scale24.map(s=>`${s*50}¢`).join(' / ')}`;
+  document.getElementById('toneGrid').innerHTML=notes.map(n=>`<div class="tone"><strong>${escapeHtml(n.label)}</strong><small>Degree ${n.degree} · ${signedCents(n.cents)}</small></div>`).join('');
+  document.getElementById('score').innerHTML=drawScore(mode,tonic,gusheh,notes);
+}
+function svgEscape(s){return escapeHtml(s).replace(/'/g,'&#39;');}
+function drawScore(mode,tonic,gusheh,notes){
+  const W=1000,H=280,top=73,bottom=169,unit=12;
+  const yFor=s=>bottom-s*unit;
+  let svg=`<svg class="score" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Staff notation for ${svgEscape(mode.name)} in ${svgEscape(tonic.name)}">
+    <rect x="0" y="0" width="1000" height="280" rx="8" fill="#f4f0e7"/>
+    <text x="38" y="30" fill="#65777c" font-size="11" font-weight="700" letter-spacing="1.3">CUSTOM SCALE SIGNATURE · ALTERED DEGREES</text>
+    <text x="850" y="30" fill="#65777c" font-size="10" text-anchor="end">TREBLE STAFF · REFERENCE OCTAVE</text>`;
+  for(let i=0;i<5;i++) svg+=`<line x1="35" y1="${top+i*24}" x2="960" y2="${top+i*24}" stroke="#35454a" stroke-width="1.2"/>`;
+  // Stylized G clef: drawn as a curled line plus a staff-reaching stem.
+  svg+=`<path d="M76 77 C56 79 57 104 77 110 C99 116 100 139 83 153 C67 166 51 153 58 137 C64 123 82 123 87 139 C92 153 87 178 79 194 M80 66 C91 95 92 123 84 151" fill="none" stroke="#1a2b34" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="79" cy="110" r="6" fill="none" stroke="#1a2b34" stroke-width="2"/>
+        <line x1="120" y1="55" x2="120" y2="210" stroke="#c6c1b8" stroke-width="1"/>`;
+  const sigStart=145,sigGap=28;
+  notes.forEach((n,i)=>{
+    if(!n.symbol)return;
+    const x=sigStart+i*sigGap,y=yFor(n.staffSteps);
+    svg+=`<text x="${x}" y="${y+5}" text-anchor="middle" class="acc" fill="#1a2b34">${svgEscape(n.symbol)}</text><text x="${x}" y="${y+15}" text-anchor="middle" fill="#9b6d20" font-size="8" font-weight="700">${svgEscape(n.fallback)}</text>`;
+  });
+  const noteStart=360,noteEnd=925,gap=(noteEnd-noteStart)/6;
+  notes.forEach((n,i)=>{
+    const x=noteStart+i*gap,y=yFor(n.staffSteps);
+    if(n.staffSteps<0){for(let s=-2;s>=n.staffSteps;s-=2)svg+=`<line x1="${x-13}" y1="${yFor(s)}" x2="${x+13}" y2="${yFor(s)}" stroke="#35454a" stroke-width="1"/>`;}
+    if(n.staffSteps>8){for(let s=10;s<=n.staffSteps;s+=2)svg+=`<line x1="${x-13}" y1="${yFor(s)}" x2="${x+13}" y2="${yFor(s)}" stroke="#35454a" stroke-width="1"/>`;}
+    const isShahid=!!gusheh?.shahid&&((gusheh.shahid-1)%7===i);
+    const isIst=!!gusheh?.ist&&((gusheh.ist-1)%7===i);
+    if(isShahid||isIst){svg+=`<ellipse cx="${x}" cy="${y}" rx="16" ry="13" fill="none" stroke="${isShahid?'#d7a640':'#52aaa1'}" stroke-width="2"/>`;if(isShahid&&isIst)svg+=`<ellipse cx="${x}" cy="${y}" rx="20" ry="17" fill="none" stroke="#52aaa1" stroke-width="1.2"/>`;}
+    if(n.symbol)svg+=`<text x="${x-29}" y="${y+5}" text-anchor="middle" class="acc" fill="#1a2b34">${svgEscape(n.symbol)}</text>`;
+    svg+=`<ellipse cx="${x}" cy="${y}" rx="9" ry="5.8" fill="#172731" transform="rotate(-18 ${x} ${y})"/>`;
+    if(n.staffSteps<=4)svg+=`<line x1="${x+7}" y1="${y-1}" x2="${x+7}" y2="${y-34}" stroke="#172731" stroke-width="1.8"/>`;
+    else svg+=`<line x1="${x-7}" y1="${y+1}" x2="${x-7}" y2="${y+34}" stroke="#172731" stroke-width="1.8"/>`;
+    svg+=`<text x="${x}" y="224" text-anchor="middle" fill="#172731" font-size="11" font-weight="700">${svgEscape(n.label)}</text><text x="${x}" y="241" text-anchor="middle" fill="#68797d" font-size="9">${n.degree} · +${n.cents}¢</text>`;
+  });
+  svg+=`<text x="39" y="242" fill="#69777b" font-size="9" font-weight="700">G CLEF</text></svg>`;
+  return svg;
+}
+modeSelect.addEventListener('change',()=>{
+  selectedMode=Number(modeSelect.value)||0;
+  const mode=DATA.modes[selectedMode];
+  selectedTonic=tonicOptionForName(mode.referenceTonicName);
+  tonicSelect.value=String(selectedTonic);
+  renderGushehs();
+  update();
+});
+gushehSelect.addEventListener('change',update);
+tonicSelect.addEventListener('change',()=>{selectedTonic=Number(tonicSelect.value)||0;update();});
+fillControls();
+</script>
+</body>
+</html>

@@ -1,0 +1,1474 @@
+{
+  "product": "Hoonaar Audio Radif Atlas",
+  "version": "0.1.0 prototype",
+  "tuningModel": "24-EDO reference; 50 cents per quarter-step",
+  "catalogNote": "Working English-transliterated catalog for the seven commonly listed dastgahs and five avaz. Gusheh names, order, counts, pitch inflections, shahid and ist can vary by radif, performer and transcription. Each mode pitch template is relative to its listed reference tonic. This is not a claim that every regional maqam or every variant is encoded.",
+  "modes": [
+    {
+      "name": "Shur",
+      "family": "Dastgah",
+      "referenceTonic": 7,
+      "scale24": [
+        0,
+        3,
+        6,
+        10,
+        13,
+        16,
+        20
+      ],
+      "gushehs": [
+        {
+          "name": "Daramad I",
+          "shahid": 1,
+          "ist": 1
+        },
+        {
+          "name": "Daramad II",
+          "shahid": 1,
+          "ist": 1
+        },
+        {
+          "name": "Daramad III — Kermesheh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Daramad IV — Rahab",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Daramad V — Owj",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Daramad VI — Molla Nazy",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Naghmeh I",
+          "shahid": 4,
+          "ist": 3
+        },
+        {
+          "name": "Naghmeh II",
+          "shahid": 4,
+          "ist": 3
+        },
+        {
+          "name": "Zirkesh-e Salmak",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Salmak",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Golriz",
+          "shahid": 8,
+          "ist": 1
+        },
+        {
+          "name": "Majles-Afrooz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Ezzal",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Safa",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Bozorg",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Kuchak",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Dobeyti",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Khara",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Qajar",
+          "shahid": 7,
+          "ist": 4
+        },
+        {
+          "name": "Hazin",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Shur-e Payin-Dasteh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rahab (gusheh)",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Chahar-Gusheh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Girayli Prelude",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Razavi",
+          "shahid": 7,
+          "ist": 4
+        },
+        {
+          "name": "Forud",
+          "shahid": null,
+          "ist": 1
+        },
+        {
+          "name": "Shahnaz",
+          "shahid": 4,
+          "ist": null
+        },
+        {
+          "name": "Qorcheh",
+          "shahid": 6,
+          "ist": 4
+        },
+        {
+          "name": "Shahnaz-Kot / Asheq-Kosh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Girayli",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Girayli Shasti",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rang-e Hashtari",
+          "shahid": 3,
+          "ist": 1
+        },
+        {
+          "name": "Rang-e Shahr-Ashub",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rang-e Zarb-e Osool",
+          "shahid": null,
+          "ist": null
+        }
+      ],
+      "referenceTonicName": "G"
+    },
+    {
+      "name": "Abu Ata",
+      "family": "Avaz",
+      "referenceTonic": 0,
+      "scale24": [
+        0,
+        4,
+        6,
+        10,
+        14,
+        17,
+        20
+      ],
+      "gushehs": [
+        {
+          "name": "Ramakali",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Daramad",
+          "shahid": 1,
+          "ist": 6
+        },
+        {
+          "name": "Sayakhi",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Hejaz",
+          "shahid": 5,
+          "ist": 1
+        },
+        {
+          "name": "Basteh-Negar",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Yeguloneh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Chaharpareh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Gabri",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Gham-Angiz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Gilaki",
+          "shahid": null,
+          "ist": null
+        }
+      ],
+      "referenceTonicName": "C"
+    },
+    {
+      "name": "Bayat-e Tork",
+      "family": "Avaz",
+      "referenceTonic": 10,
+      "scale24": [
+        0,
+        4,
+        8,
+        10,
+        14,
+        18,
+        21
+      ],
+      "gushehs": [
+        {
+          "name": "Daramad I",
+          "shahid": 1,
+          "ist": 5
+        },
+        {
+          "name": "Dugah",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Forud",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Daramad II",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Daramad III",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Kermesheh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Haji Hasani",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Basteh-Negar",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Zanguleh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Khosravani",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Naghmeh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Feyli",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Shekasteh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Mehrabani",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Jameh-Daran",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Mehdi Zarrabi",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Ruh-al-Arvah",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Qara'i",
+          "shahid": null,
+          "ist": null
+        }
+      ],
+      "referenceTonicName": "Bb"
+    },
+    {
+      "name": "Afshari",
+      "family": "Avaz",
+      "referenceTonic": 0,
+      "scale24": [
+        0,
+        3,
+        6,
+        10,
+        14,
+        17,
+        20
+      ],
+      "gushehs": [
+        {
+          "name": "Daramad",
+          "shahid": 1,
+          "ist": 6
+        },
+        {
+          "name": "Basteh-Negar",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Iraq",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Naghmeh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Jameh-Daran (other radifs)",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Ruhab (other radifs)",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Meydan (other radifs)",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Sufi-nameh (other radifs)",
+          "shahid": null,
+          "ist": null
+        }
+      ],
+      "referenceTonicName": "C"
+    },
+    {
+      "name": "Dashti",
+      "family": "Avaz",
+      "referenceTonic": 0,
+      "scale24": [
+        0,
+        3,
+        6,
+        10,
+        14,
+        17,
+        20
+      ],
+      "gushehs": [
+        {
+          "name": "Daramad",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Owj / Asheq",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Bidgani",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Hajiani",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Gham-Angiz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Gilaki",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Chupani (other radifs)",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Dashtestani (other radifs)",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Deylaman (other radifs)",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Kucheh-Baghi (other radifs)",
+          "shahid": null,
+          "ist": null
+        }
+      ],
+      "referenceTonicName": "C"
+    },
+    {
+      "name": "Homayun",
+      "family": "Dastgah",
+      "referenceTonic": 7,
+      "scale24": [
+        0,
+        3,
+        8,
+        10,
+        14,
+        16,
+        20
+      ],
+      "gushehs": [
+        {
+          "name": "Daramad I",
+          "shahid": 2,
+          "ist": 7
+        },
+        {
+          "name": "Daramad II",
+          "shahid": 2,
+          "ist": 7
+        },
+        {
+          "name": "Zang-e Shotor",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Mowaliyan",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Chakavak",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Tarz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Bidad",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Bidad-Kot",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Ney-Davud",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Bavi",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Suz-o-Godaz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Abol-Chap",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Leili va Majnun",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Ravandi",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Nowruz-e Arab",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Nowruz-e Saba",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Nowruz-e Khara",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Nafir",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Farang",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Shushtari-Gardan",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Shushtari",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Jameh-Daran",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Raz-o-Niaz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Meygoli",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Moalef",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Bakhtiari",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Ezzal / Denasari",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rang-e Farah",
+          "shahid": null,
+          "ist": null
+        }
+      ],
+      "referenceTonicName": "G"
+    },
+    {
+      "name": "Bayat-e Esfahan",
+      "family": "Avaz",
+      "referenceTonic": 0,
+      "scale24": [
+        0,
+        4,
+        6,
+        10,
+        14,
+        17,
+        22
+      ],
+      "gushehs": [
+        {
+          "name": "Daramad",
+          "shahid": 1,
+          "ist": null
+        },
+        {
+          "name": "Jameh-Daran",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Bayat-e Rajeh I",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Bayat-e Rajeh II",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Forud",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Naghmeh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Suz-o-Godaz",
+          "shahid": 1,
+          "ist": null
+        },
+        {
+          "name": "Owj / Asheq (other radifs)",
+          "shahid": 5,
+          "ist": null
+        }
+      ],
+      "referenceTonicName": "C"
+    },
+    {
+      "name": "Segah",
+      "family": "Dastgah",
+      "referenceTonic": 5,
+      "scale24": [
+        0,
+        4,
+        7,
+        11,
+        14,
+        17,
+        20
+      ],
+      "gushehs": [
+        {
+          "name": "Chaharmezrab",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Daramad",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Naghmeh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Kermesheh ba Muyeh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Kermesheh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Zang-e Shotor",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Zabol",
+          "shahid": 3,
+          "ist": 1
+        },
+        {
+          "name": "Basteh-Negar I",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Muyeh I",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Mokhalef",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Haji Hasani",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Basteh-Negar II",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Maghlub",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Naghmeh-e Maghlub",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Hazin",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Muyeh II",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rahab",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Masihi",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Shah-Khata'i",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Takht-e Taqdis",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rang-e Delgosha",
+          "shahid": null,
+          "ist": null
+        }
+      ],
+      "referenceTonicName": "F"
+    },
+    {
+      "name": "Chahargah",
+      "family": "Dastgah",
+      "referenceTonic": 0,
+      "scale24": [
+        0,
+        3,
+        8,
+        10,
+        14,
+        17,
+        22
+      ],
+      "gushehs": [
+        {
+          "name": "Daramad I",
+          "shahid": 1,
+          "ist": 1
+        },
+        {
+          "name": "Daramad II",
+          "shahid": 1,
+          "ist": 1
+        },
+        {
+          "name": "Daramad III — Pish-Zanguleh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Daramad IV",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Naghmeh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Kermesheh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Kermesheh ba Muyeh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Zang-e Shotor",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Zabol",
+          "shahid": 3,
+          "ist": 1
+        },
+        {
+          "name": "Basteh-Negar",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Muyeh",
+          "shahid": 4,
+          "ist": null
+        },
+        {
+          "name": "Forud",
+          "shahid": null,
+          "ist": 1
+        },
+        {
+          "name": "Hesar",
+          "shahid": 5,
+          "ist": null
+        },
+        {
+          "name": "Hesar — parts I–III",
+          "shahid": 5,
+          "ist": null
+        },
+        {
+          "name": "Chaharmezrab-e Hesar",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Pas-Hesar",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Mokhalef",
+          "shahid": 6,
+          "ist": null
+        },
+        {
+          "name": "Haji Hasani",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Maghlub",
+          "shahid": 8,
+          "ist": null
+        },
+        {
+          "name": "Naghmeh-e Maghlub",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Hazin",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Hodi",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Pahlavi",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rajaz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Mansuri",
+          "shahid": 8,
+          "ist": 1
+        },
+        {
+          "name": "Mansuri — parts II–III",
+          "shahid": 8,
+          "ist": null
+        },
+        {
+          "name": "Lezgi",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Matn o Hashiyeh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rang-e Shahr-Ashub",
+          "shahid": null,
+          "ist": null
+        }
+      ],
+      "referenceTonicName": "C"
+    },
+    {
+      "name": "Mahur",
+      "family": "Dastgah",
+      "referenceTonic": 0,
+      "scale24": [
+        0,
+        4,
+        8,
+        10,
+        14,
+        18,
+        22
+      ],
+      "gushehs": [
+        {
+          "name": "Daramad",
+          "shahid": 1,
+          "ist": 1
+        },
+        {
+          "name": "Kermesheh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Avaz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Moqaddameh-ye Dad",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Dad",
+          "shahid": 2,
+          "ist": null
+        },
+        {
+          "name": "Majles-Afrooz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Khosravani",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Delkash",
+          "shahid": 5,
+          "ist": null
+        },
+        {
+          "name": "Khavaran",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Tarab-Angiz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Neyshaburak",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Tusi / Nasir-Khani",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Chaharpareh / Morad-Khani",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Feyli",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Mahur-e Saghir",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Azerbaijani",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Hesar-e Mahur / Abul",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Zirafkand",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Neyriz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Shekasteh",
+          "shahid": 5,
+          "ist": null
+        },
+        {
+          "name": "Iraq",
+          "shahid": 8,
+          "ist": null
+        },
+        {
+          "name": "Nahib",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Mohayyer",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Ashur-Aavand",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Esfahanak",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Hazin",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Zanguleh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rak-e Hendi",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rak-e Kashmir",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rak-e Abdullah",
+          "shahid": 1,
+          "ist": 1
+        },
+        {
+          "name": "Safir-e Rak",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Saghiyameh",
+          "shahid": null,
+          "ist": null
+        }
+      ],
+      "referenceTonicName": "C"
+    },
+    {
+      "name": "Nava",
+      "family": "Dastgah",
+      "referenceTonic": 7,
+      "scale24": [
+        0,
+        4,
+        6,
+        10,
+        14,
+        17,
+        20
+      ],
+      "gushehs": [
+        {
+          "name": "Chaharmezrab",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Daramad I",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Daramad II",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Kermesheh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Gardaniyeh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Naghmeh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Bayat-e Rajeh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Hazin",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Oshaq",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Nahoft",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Gavest / Goosht",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Ashiran",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Neyshaburak",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Majlesi",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Khojasteh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Malek-Hossein",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Hossein",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Busalik",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Neyriz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rang-e Nastari",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rang-e Nava",
+          "shahid": null,
+          "ist": null
+        }
+      ],
+      "referenceTonicName": "G"
+    },
+    {
+      "name": "Rast-Panjgah",
+      "family": "Dastgah",
+      "referenceTonic": 5,
+      "scale24": [
+        0,
+        4,
+        8,
+        10,
+        14,
+        18,
+        22
+      ],
+      "gushehs": [
+        {
+          "name": "Daramad I",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Daramad II",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Zanguleh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Naghmeh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Khosravani",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Ruh-Afza",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Panjgah",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Sepehr",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Oshaq",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Neyriz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Bal-e Kabootaran",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Bayat-e Ajam",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Bahr-e Noor",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Qarcheh",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Mobarqa",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Provanah",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Tarz",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Abol-Chap",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Leili va Majnun",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Ravandi",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Nowruz-e Arab",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Nowruz-e Saba",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Nowruz-e Khara",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Nafir",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Farang",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rak-e Abdullah",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rak-e Kashmir",
+          "shahid": null,
+          "ist": null
+        },
+        {
+          "name": "Rak-e Hendi",
+          "shahid": null,
+          "ist": null
+        }
+      ],
+      "referenceTonicName": "F"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Persian Classical Music: System of Modes",
+      "url": "https://fis-iran.org/ebook/persian-system-of-modes/",
+      "use": "Seven dastgah/five avaz grouping and the 12 representative pitch spellings used as the prototype’s 24-EDO reference."
+    },
+    {
+      "title": "Radif (Iranian music) — overview",
+      "url": "https://fa.wikipedia.org/wiki/%D8%B1%D8%AF%DB%8C%D9%81_(%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C)",
+      "use": "Background on variation in radif counts, names and ordering."
+    },
+    {
+      "title": "Shur gusheh list",
+      "url": "https://tanbur-music.ir/%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C/%DA%AF%D9%88%D8%B4%D9%87%D9%87%D8%A7%DB%8C-%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87-%D8%B4%D9%88%D8%B1/",
+      "use": "Working names for the Shur catalog."
+    },
+    {
+      "title": "Mahur gusheh list",
+      "url": "https://fa.wikipedia.org/wiki/%D9%85%D8%A7%D9%87%D9%88%D8%B1_(%D8%AF%D8%B3%D8%AA%DA%AF%D8%A7%D9%87_%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C)",
+      "use": "Working names for the Mahur catalog."
+    },
+    {
+      "title": "Other gusheh catalog references",
+      "url": "https://mahoor.com/fa/cd/20843-the-mirz%C3%A2-abdoll%C3%A2h-radif-for-ud-cd",
+      "use": "Cross-checking common gusheh names across published Mirza Abdollah radif listings."
+    }
+  ]
+}
